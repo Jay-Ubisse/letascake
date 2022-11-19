@@ -1,0 +1,519 @@
+/*Typography*/
+
+@font-face {
+    font-family: nicole;
+    src: url(../fonts/Niconne-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box
+}
+
+/*O container do Slideshow*/
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.hide {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: grey;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #d90429;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media(min-width: 961px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-image: url("../img/background.jpg");
+        background-size: cover;
+        color: #000814;
+    }
+    body > section {
+        border-style: solid;
+        border-color: rgba(141, 153, 174, 0.8);
+        background-color: rgba(141, 153, 174, 0.8);
+        height: 100%;
+        width: 100%;
+    }
+
+    header,
+    main,
+    footer {
+        width: 70%;
+        background-color: transparent;
+        margin: auto;
+    }
+
+    header {
+        margin-top: 5rem;
+    }
+
+    header>section {
+        position: relative;
+    }
+
+    header>section>h3 {
+        position: absolute;
+        top: -1rem;
+        right: 1rem;
+    }
+
+    header>section>div {
+        width: fit-content;
+        margin: 1rem auto 1rem auto;
+        text-align: center;
+    }
+
+    header>section>div>h1 {
+        font-family: nicole;
+        font-weight: bold;
+        font-size: 4.5rem;
+        color: #d90429;
+        margin: 0;
+    }
+
+    header>section>div>p {
+        margin-top: 0;
+        font-weight: 700;
+        font-size: larger;
+        color: #d90429;
+    }
+
+    header>section>div#menu-icon {
+        display: none;
+    }
+    header > nav > ul > div#exit-icon {
+        display: none;
+    }
+    header>nav {
+        margin-top: 3rem;
+    }
+
+    header>nav>ul {
+        margin: auto;
+        padding: 0;
+        list-style: none;
+        width: fit-content;
+        height: 2rem;
+    }
+
+    header>nav>ul>div>li {
+        float: left;
+        margin: 0;
+        padding: 0;
+        margin-top: 0.5rem;
+        width: fit-content;
+    }
+
+    header>nav>ul>div>li>a {
+        margin: 0;
+        padding: 0.5rem 3rem;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #d90429;
+        border-style: solid none;
+        border-width: 1px;
+        border-color: #ffffff;
+        font-weight: 700;
+    }
+
+    header>nav>ul>div>li>a:hover {
+        text-decoration: none;
+        color: #d90429;
+        background-color: transparent;
+    }
+
+    .first {
+        color: #d90429;
+        background-color: transparent;
+        border-left-style: solid;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+
+    .last {
+        border-right-style: solid;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+    }
+
+    main>section {
+        margin-top: 80px;
+    }
+    section#about {
+        background-color: white;
+        display: flex;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    section#about > div#description {
+        font-family: source-sans;
+        color: #717171;
+    }
+
+    section#faq {
+        color: #717171;
+        background-color: white;
+        padding: 20px;
+    }
+    section#faq > h1 {
+        margin-left: 40px;
+    }
+    section#faq > div#faq-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 20px;
+        
+    }
+    section#faq > div#faq-container > div {
+        font-family: source-sans;
+        color: #717171;
+        width: 90%;
+        margin-left: 20px;
+    }
+    footer {
+        font-weight: 700;
+    }
+    footer>section#left {
+        float: left;
+        margin-bottom: 15px;
+
+    }
+
+    footer>section#right {
+        float: right;
+        margin-bottom: 15px;
+
+    }
+
+    footer>p {
+        border-top-style: solid;
+        border-width: thin;
+        clear: both;
+        font-size: small;
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    footer>p>a {
+        color: white;
+    }
+
+    footer #insta-icon {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    footer>section#left>div {
+        margin-bottom: 10px;
+    }
+
+    footer>section#left>p {
+        margin: 0;
+    }
+
+
+    footer input {
+        margin: 10px 0;
+        padding: 10px;
+        border-style: none;
+        border-radius: 5px;
+    }
+
+    footer input.email {
+        width: 100%;
+        background-color: #edf2f4;
+        outline: none;
+    }
+
+    footer input.email:focus {
+        border-style: solid;
+        border-width: 2px;
+        border-color: #d90429;
+
+    }
+
+    footer input.submit {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #d90429;
+    }
+}
+@media (min-width: 320px) and (max-width: 960px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-image: url("../img/background.jpg");
+        background-size: cover;
+        color: #000814;
+    }
+    body > section {
+        border-style: solid;
+        border-color: rgba(141, 153, 174, 0.8);
+        background-color: rgba(141, 153, 174, 0.8);
+        height: 100%;
+        width: 100%;
+    }
+    header, main,
+    footer {
+        width: 100%;
+        background-color: transparent;
+        margin: auto;
+    }
+
+    header>section {
+        position: relative;
+    }
+
+    header>section>h3 {
+        font-size: 1rem;
+        position: absolute;
+        top: -3px;
+        right: 4rem;
+    }
+
+    header>section>div {
+        width: fit-content;
+        margin: 10px;
+        padding: 0;
+    }
+
+    header>section>div>h1 {
+        font-family: nicole;
+        font-weight: bold;
+        font-size: 2rem;
+        color: #d90429;
+        margin: 0;
+        padding: 0;
+    }
+    header>section>div>p {
+        font-size: small;
+        font-weight: 600;
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 0;
+        color: #d90429;
+    }
+    header>section>div#menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    header > nav > ul > div#exit-icon {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+    header > nav > ul > div#list {
+        margin-top: 50px;
+    }
+    header>nav>ul {
+        position: fixed;
+        top: -15px;
+        height: 100vh;
+        width: 100vw;
+        padding: 0 30px;
+        list-style: none;
+        background-color: #8d99ae;
+        z-index: 1;
+    }
+
+    header>nav>ul>div>li {
+        margin: 0;
+        padding: 20px 0;
+    }
+    header>nav>ul>div>li + li {
+        border-top-style: solid;
+        border-color: #d90429;
+    }
+
+    header>nav>ul>div>li>a {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        color: #d90429;
+    }
+    main>section {
+        margin-top: 40px;
+    }
+
+    section#about {
+        background-color: white;
+        display: block;
+        gap: 20px;
+        padding: 30px;
+        width: 85%;
+        margin: auto;
+    }
+
+    section#about > div#description {
+        font-family: source-sans;
+        color: #717171;
+    }
+
+    section#about > div#pic > img {
+        width: 100%;
+    }
+
+    section#faq {
+        color: #717171;
+        background-color: white;
+        width: 85%;
+        margin: auto;
+        padding: 20px;
+    }
+    section#faq > h1 {
+        margin-left: 20px;
+    }
+    section#faq > div#faq-container {
+        display: block;
+        gap: 15px;
+        margin: 20px;
+    }
+    section#faq > div#faq-container > div {
+        font-family: source-sans;
+        color: #717171;
+    }
+
+    footer {
+        font-weight: 700;
+    }
+
+    footer>p {
+        border-top-style: solid;
+        border-width: thin;
+        font-size: small;
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    footer>p>a {
+        color: white;
+    }
+
+    footer>section#left>p {
+        margin: 5px 5px;
+        font-size: small;
+    }
+
+    form {
+        width: 90%;
+        margin: 20px auto;
+        padding-top: 10px;
+        
+    }
+    form label {
+        font-size: small;
+    }
+    footer input {
+        margin: 10px 0;
+        padding: 10px;
+        border-style: none;
+        border-radius: 5px;
+    }
+    footer input.email {
+        width: 100%;
+        background-color: #edf2f4;
+        outline: none;
+    }
+
+    footer input.email:focus {
+        border-style: solid;
+        border-width: 2px;
+        border-color: #d90429;
+
+    }
+
+    footer input.submit {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #d90429;
+    }
+}
